@@ -1,0 +1,27 @@
+<ion-header-bar align-title="left" class="bar-positive">
+    <h1 class="title">List User!</h1>
+    <a  href="#/tab/adduser">
+        <div class="buttons pull-right">
+            <button class="button"><i class="icon ion-plus"></i></button>
+        </div>
+    </a>
+</ion-header-bar>
+
+<ion-view>
+    <div>
+        <ion-content>
+            <ion-list>
+                <ion-item class="item-avatar item-icon-right" ng-repeat="user in users" type="item-text-wrap" href="#/tab/users/{{user.$id}}">
+                    <img ng-src="img/ionic.png">
+                    <h2>{{user.firstName}} {{user.lastName}}</h2>
+                    <p>{{user.address}}</p>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+
+                    <ion-option-button class="button-assertive" ng-click="remove(user)">
+                        Delete
+                    </ion-option-button>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </div>
+</ion-view>

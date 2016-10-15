@@ -1,0 +1,40 @@
+<ion-header-bar align-title="left" class="bar-positive">
+    <a href="#/tab/users" class="button active button-outline button-home">
+        <i class="icon ion-home"></i>
+    </a>
+    <h1 class="title">Add User</h1>
+</ion-header-bar>
+
+<ion-view>
+    <ion-content class="padding">
+        <img ng-src="img/ionic.png" style="width: 64px; height: 64px">
+        <form  ng-controller="AddUserCtrl" ng-submit="addUser()">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="John" ng-model="user.firstName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="Suhr" ng-model="user.lastName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="john@suhr.com" ng-model="user.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Mobile</span>
+                    <input type="text" placeholder="john@suhr.com" ng-model="user.mobile">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Address</span>
+                    <input type="text" placeholder="1600 Amphitheatre Parkway" ng-model="user.address">
+                </label>
+                <ion-toggle ng-model="user.isClose" toggle-class="toggle-calm">isClose</ion-toggle>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary">
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

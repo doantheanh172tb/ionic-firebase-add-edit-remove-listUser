@@ -1,0 +1,34 @@
+<ion-header-bar  align-title="left" class="bar-positive">
+    <a href="#/tab/users" class="button active button-outline button-home">
+        <i class="icon ion-home"></i>
+    </a>
+    
+    <h1 class="title">Detail: {{user.fristName}} {{user.lastName}}</h1>
+    <a href="#/tab/edit/{{user.$id}}" class="button active button-outline button-home">
+        <i class="icon ion-edit"></i>
+    </a>
+</ion-header-bar>
+
+<ion-view view-title="{{user.fristName}} {{user.lastName}}">
+    <ion-content class="padding">
+        <img ng-src="img/ionic.png" style="width: 64px; height: 64px">
+        <p>
+            {{user.fristName}}
+        </p>
+        <p>
+            {{user.lastName}}
+        </p>
+        <p>
+            {{user.mobile}}
+        </p>
+        <p>
+            {{user.email}}
+        </p>
+        <p>
+            {{user.adress}}
+        </p>
+        <p>
+            {{user.isClose}}
+        </p>
+    </ion-content>
+</ion-view>
